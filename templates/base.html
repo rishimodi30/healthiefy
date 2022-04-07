@@ -1,0 +1,91 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'index_style.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <title>healthiefy</title>
+    
+  </head>
+  <body> 
+    <div class="wrapper">
+
+        <!--navigation bar-->
+        <div class="nav">
+            <div class="logo">
+                <h4>healthiefy</h4>
+      
+            </div>
+            <div class="links" style="margin-left:36vw">
+          
+              <a href="about/">about medicines</a>
+              <a href="diagnosis/">diagnosis</a>
+              <a href="docguide/">doc-guide</a>
+              <a href="covidalerts/">covid alerts</a>
+            
+            </div>
+          
+              <input class="search-txt" type="text" placeholder="   search.." 
+                     style="
+                     background:transparent;
+                     border: none;
+                     border-left: none; /* Prevent double borders */
+                     cursor: pointer;
+                     outline: none;
+                     background-color:#ffc43a;
+                     height: 6vh;
+                     border-radius: 8px;
+                     "
+              >
+                <button type="submit" class="input-button" 
+                  style="border: none;
+                  background: none;
+                  
+                  "
+                >
+                  <img src="{% static 'search.png'%}" class="search-img"
+                    style="width: 5vh;"
+                  >
+                </button>
+            
+        </div>
+
+    {% block content %}
+    
+    {% endblock %}
+
+      
+  </body>
+  <script>
+
+function getvalues(){
+      
+      var selected=new Array();
+      var chkbox=document.getElementById("tab1");
+      var selected_check=document.getElementsByName('chk_dis')
+      
+      for(var i=0;i<selected_check.length;i++)
+      {
+        if(selected_check[i].checked)
+          {
+             selected.push('1');
+          }
+          else
+          {
+            selected.push('0');
+          }
+      
+      }
+      console.log(selected);
+      }
+
+
+  </script>
+
+  
+</html>

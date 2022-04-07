@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="symptoms">
+
+    
+    <form id="form1" action="" method="post">
+    
+        {% csrf_token %}
+        {% for lable in lables %}
+   
+       <input type="checkbox" id="cbs" name="chk_dis[]"  value="{{lable}}"/>{{lable}}
+       <br>
+    
+      {% endfor %}
+    <input type="submit" value="submit">
+    
+    </form>
+    </div>
+{% endblock %}

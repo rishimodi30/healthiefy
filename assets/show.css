@@ -1,0 +1,69 @@
+html,body{
+    background-color: ivory;
+    font-family: 'ubuntu',sans-serif !important;
+    overflow-x:hidden !important ;
+    margin: 0px !important;
+    padding: 0px !important;
+    height: 100%;
+
+}
+
+*{
+    text-decoration: none !important;
+}
+
+.nav{
+    
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: unset;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(141, 138, 138, 0.1);
+
+    
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(69, 97, 81);
+
+}
+.nav .links{
+    margin-right: 55px;
+}
+.nav .links input[type=text]{
+    
+    padding: auto;
+    font-size: 16px;
+    font-family:'ubuntu',sans-serif ;
+    border: 1px solid rgb(69, 97, 81);
+    width:auto;
+    background:  rgb(200, 224, 211);
+    border-radius: 40px;
+  
+}
+.nav .links button{
+    
+       
+        width:auto;
+        height: auto;
+        background: rgb(255, 255, 255);
+        color:rgb(69, 97, 81);
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-left: none; /* Prevent double borders */
+        cursor: pointer;
+        outline: none;
+        border-radius: 40px;
+}
+

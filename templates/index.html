@@ -1,0 +1,74 @@
+ 
+{% extends "base.html" %}
+{%load static%}
+
+
+{% block content %}
+
+<!--landing page-->
+
+  <div class="landing">
+      <div class="landing-text">
+          <h1>healthiefy <span style="color: rgb(104, 161, 104);font-size: 3vw;">yourself</span></h1>
+          <h3>in this pandemic keep track of yourself digitally </h3>
+
+          <div class="btn">
+              <a href="#">health-tips</a>
+          </div>
+      </div>
+      <div class="landing-image">
+          <img src="{% static 'landing_1_home.jpg'%}" alt="">
+
+      </div>
+  </div>
+
+
+  <!------------------images---------------------------->
+  <div class="images">
+
+      <div class="img_each">
+          <img src="{% static 'mask.jpeg'%}" alt="">
+          <span>wear mask </span>
+      </div>
+      <div class="img_each">
+          <img src="{% static 'social distance.jpeg'%}" alt="" class="img2">
+          <span>keep distance</span>
+      </div>
+      <div class="img_each">
+          <img src="{% static 'handwash.jpg'%}" alt="" class="img3">
+          <span>wash hands</span>
+      </div>
+  </div>
+  <!--describe-->
+
+  <div class="desc">
+
+      <div class="links">
+          <ul>
+              <li><a href="about/">about medicines</a></li>
+              <li><a href="casestudies/">case studies</a></li>
+              <li><a href="docguide/">doc-guide</a></li>
+              <li><a href="covidalerts/">covid alerts</a></li>
+          </ul>
+
+
+
+
+      </div>
+      <div class="desc-text">
+          <h3 style="color: rgb(104, 161, 104);font-size: 3vw;margin: 0 !important ;">stay healthy</h3>
+          <h1>to stay happy</h1>
+
+      </div>
+  </div>
+
+
+{% endblock %}
+    
+
+
+
+
+
+
+      
