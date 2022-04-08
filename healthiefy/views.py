@@ -1,6 +1,7 @@
+from asyncio.windows_events import NULL
 from pyexpat import model
 from wsgiref.util import request_uri
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 import pickle
 import prediction
@@ -22,6 +23,7 @@ def about(request):
 
 
 def diagnosis(request):
+    data=0
     if request.method=='POST':
 
       base = request.POST.getlist('chk_dis[]')
@@ -37,7 +39,8 @@ def diagnosis(request):
       fin_np = np.array(raw_list)
 
       fin_np=fin_np.reshape(1,-1)
-      return HttpResponse(predict_res(fin_np))
+      data=predict_res(fin_np)
+      return redirect('')
     
     return render(request,'diagnosis.html',{'lables':prediction.lables})
 

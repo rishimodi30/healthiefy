@@ -19,11 +19,11 @@ def split_train_test(data,test_ratio):
     
 #LabelEncoder
 le = LabelEncoder()
-for i in symptoms.prognosis:
-    print(i)
+#for i in symptoms.prognosis:
+ #   print(i)
 symptoms.prognosis = le.fit_transform(symptoms.prognosis)
-for i in symptoms.prognosis:
-    print(i)
+#for i in symptoms.prognosis:
+ #   print(i)
 
 #symptoms
 #symptoms.describe()
