@@ -16,13 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from pyrsistent import inc
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.index,name="index"),
-    path('about/',views.about,name="about"),
-    path('diagnosis/',views.diagnosis,name="diagnosis"),
-    path('docguide/',views.docguide,name="docguide"),
-    path('covidalerts/',views.covidalerts,name="covidalerts"),
+    
+    path('',include('index.urls'),name="index"),
+    
+    path('about/',include('about.urls'),name="about"),
+    
+    path('diagnosis/',include('diagnosis.urls'),name="diagnosis"),
+    
+    path('docguide/',include('docguide.urls'),name="docguide"),
+    
+    path('covidalerts/',include('covidalerts.urls'),name="covidalerts"),
+    
     #path('predict_res/',views.predict_res,name="predict_res"),
 ]

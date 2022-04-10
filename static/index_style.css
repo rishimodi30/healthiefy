@@ -86,7 +86,7 @@ html,body{
     margin-top: 30px;
     font-size: 1.2vw;
     padding: 14px 20px 14px 20px;
-    background-color: aqua;
+    background-color: skyblue;
     color: azure;
     border-radius: 45px;
     text-align: center;
@@ -175,4 +175,12 @@ html,body{
     font-size: 13vh;
     margin: 0 !important;
     
+}
+
+
+.footer{
+
+    width: 100%;
+    height: 100px;
+    background: #cb9601;
 }
